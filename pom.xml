@@ -28,6 +28,21 @@
     </modules>
 
     <build>
+	    <plugins>
+		    <plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>4.2.0.Final</version>
+				<configuration>
+
+					<!-- control remote wildfly server -->
+					<hostname>localhost</hostname>
+					<port>9990</port>
+					<username>${wildfly.username}</username>
+					<password>${wildfly.username}</password>
+				</configuration>
+			</plugin>
+	    </plugins>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -56,19 +71,6 @@
                     <artifactId>maven-checkstyle-plugin</artifactId>
                     <version>${checkstyle.version}</version>
                 </plugin>
-                     <plugin>
-				<groupId>org.wildfly.plugins</groupId>
-				<artifactId>wildfly-maven-plugin</artifactId>
-				<version>4.2.0.Final</version>
-				<configuration>
-
-					<!-- control remote wildfly server -->
-					<hostname>localhost</hostname>
-					<port>9990</port>
-					<username>${wildfly.username}</username>
-					<password>${wildfly.username}</password>
-				</configuration>
-			</plugin>
             </plugins>
         </pluginManagement>
     </build>
