@@ -41,12 +41,13 @@
                     </properties>
                 </configuration>
             </configuration>
-                  <dependency>
+                  <dependencies>
+                      <dependency>
     <groupId>org.jboss.as</groupId>
     <artifactId>jboss-as-controller-client</artifactId>
     <version>7.2.0.Final</version>
 </dependency>
-
+                  </dependencies>
         </plugin>
              </plugins>
          </build>
