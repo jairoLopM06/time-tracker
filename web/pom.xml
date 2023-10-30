@@ -18,6 +18,11 @@
             <artifactId>time-tracker-core</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.jboss.as</groupId>
+            <artifactId>jboss-as-controller-client</artifactId>
+            <version>7.2.0.Final</version>
+        </dependency>
     </dependencies>
 
          <build>
@@ -41,13 +46,6 @@
                     </properties>
                 </configuration>
             </configuration>
-                  <dependencies>
-                      <dependency>
-    <groupId>org.jboss.as</groupId>
-    <artifactId>jboss-as-controller-client</artifactId>
-    <version>7.2.0.Final</version>
-</dependency>
-                  </dependencies>
         </plugin>
              </plugins>
          </build>
