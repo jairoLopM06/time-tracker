@@ -57,25 +57,18 @@
                     <version>${checkstyle.version}</version>
                 </plugin>
                 <plugin>
-                    <groupId>org.codehaus.cargo</groupId>
-                    <artifactId>cargo-maven3-plugin</artifactId>
-                    <configuration>
-                        <container>
-                            <containerId>jboss7x</containerId>
-                            <type>remote</type>
-                        </container>
-                        <configuration>
-                            <type>runtime</type>
-                            <properties>
-                                 <cargo.hostname>localhost</cargo.hostname>
-                                 <cargo.remote.username>cloud-user</cargo.remote.username>
-                                 <cargo.remote.password>password1234</cargo.remote.password>
-                                 <cargo.remote.protocol>http</cargo.remote.protocol> <!-- or https if using SSL -->
-                                 <cargo.jboss.management.port>9990</cargo.jboss.management.port> <!-- Management port for JBoss EAP -->
-                             </properties>
-                         </configuration>
-                   </configuration>
-        </plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>4.2.0.Final</version>
+				<configuration>
+
+					<!-- control remote wildfly server -->
+					<hostname>localhost</hostname>
+					<port>9990</port>
+					<username>cloud-user</username>
+					<password>password1234</password>
+				</configuration>
+			</plugin>
             </plugins>
         </pluginManagement>
     </build>
